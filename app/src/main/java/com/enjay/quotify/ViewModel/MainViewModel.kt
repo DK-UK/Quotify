@@ -24,13 +24,16 @@ class MainViewModel(val context: Context) : ViewModel() {
     fun getNextQuote() : Quote = quoteList[++index]
     fun getPreviousQuote() : Quote = quoteList[--index]
 
-    fun getQuotesFromAssets(context: Context) : Array<Quote> {
+    private fun getQuotesFromAssets(context: Context) : Array<Quote> {
         val inputStream = context.assets.open("quotes.json")
         val size = inputStream.available()
         val buffer = ByteArray(size)
         inputStream.read(buffer)
         inputStream.close()
         val json = String(buffer,Charsets.UTF_8)
+
+        Log.e("Dhaval", "getQuotesFromAssets: JSON : $json")
+
         val gson = Gson()
         return gson.fromJson(json,Array<Quote>::class.java)
     }

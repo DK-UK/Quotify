@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setQuote(quote: Quote){
-        txtQuoteText.text = quote.quoteText
-        txtQuoteAuthor.text = quote.quoteAuthor
+        txtQuoteText.text = quote.text
+        txtQuoteAuthor.text = quote.author
     }
 
     fun onNext(view: View) {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     fun onShare(view: View) {
         var shareQuoteIntent = Intent(Intent.ACTION_SEND)
         shareQuoteIntent.setType("text/plain")
-        shareQuoteIntent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().quoteText)
+        shareQuoteIntent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().text)
         startActivity(shareQuoteIntent)
     }
 }

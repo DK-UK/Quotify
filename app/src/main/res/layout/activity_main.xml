@@ -74,6 +74,7 @@
         android:layout_marginEnd="15dp"
        android:layout_marginTop="-35dp"
         android:src="@drawable/ic_share"
+        android:tint="#FF5F5757"
         android:onClick="onShare"/>
 
     <TextView
@@ -83,13 +84,14 @@
         android:text="Previous"
         android:drawableLeft="@drawable/ic_left_size_arrow"
         android:drawablePadding="5dp"
-        android:textColor="@color/white"
+        android:textColor="#FF5F5757"
         android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:onClick="onPrevious"
+        android:drawableTint="#FF5F5757"
         />
 
     <TextView
@@ -99,7 +101,7 @@
         android:text="Next"
         android:drawableRight="@drawable/ic_right_side_arrow"
         android:drawablePadding="5dp"
-        android:textColor="@color/white"
+        android:textColor="#FF5F5757"
         android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -107,5 +109,6 @@
         android:padding="10dp"
         android:gravity="center_vertical"
         android:onClick="onNext"
+        android:drawableTint="#5F5757"
         />
 </RelativeLayout>

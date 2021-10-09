@@ -1,4 +1,4 @@
 package com.enjay.quotify
 
-data class Quote(var quoteText : String, var quoteAuthor: String) {
+data class Quote(var text : String, var author: String) {
 }
